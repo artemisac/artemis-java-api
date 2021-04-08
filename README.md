@@ -1,10 +1,9 @@
 <p align="center">
-  <img width="90%" src="https://i.imgur.com/gpjLEmU.png" alt="Artemis">
+  <img width="75%" src="https://i.imgur.com/gpjLEmU.png" alt="Artemis">
   <br>
-  <a href="https://github.com/terminalsin/utrust-java-library/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/terminalsin/utrust-java-library"></a>
-  <a href="https://github.com/terminalsin/utrust-java-library/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/terminalsin/utrust-java-library"></a>
-  <a href="https://github.com/terminalsin/utrust-java-library/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/terminalsin/utrust-java-library"></a>
-  <a href="https://github.com/terminalsin/utrust-java-library"><img alt="GitHub license" src="https://img.shields.io/github/license/terminalsin/utrust-java-library"></a>
+  <a href="https://github.com/artemisac/artemis-java-api/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/terminalsin/utrust-java-library"></a>
+  <a href="https://github.com/artemisac/artemis-java-api/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/terminalsin/utrust-java-library"></a>
+  <a href="https://github.com/artemisac/artemis-java-api/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/terminalsin/utrust-java-library"></a>
 </p>
 
 ## What is Artemis?
