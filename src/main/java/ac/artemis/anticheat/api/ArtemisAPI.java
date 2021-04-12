@@ -1,5 +1,6 @@
 package ac.artemis.anticheat.api;
 
+import ac.artemis.anticheat.api.listener.PunishListener;
 import ac.artemis.anticheat.api.listener.VerboseListener;
 import cc.ghast.packet.nms.ProtocolVersion;
 
@@ -13,4 +14,10 @@ public interface ArtemisAPI {
     void removeVerboseListener(VerboseListener verboseListener);
 
     void clearVerboseListeners();
+
+    void addBanListener(PunishListener verboseListener);
+
+    void removeBanListener(PunishListener verboseListener);
+
+    void clearBanListeners();
 }
