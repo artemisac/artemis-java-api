@@ -35,4 +35,14 @@ public interface Alert {
      */
     String toMinecraftMessage();
 
+    /**
+     * Allows you to cancel the event
+     */
+    void setCancelled(boolean cancelled);
+
+    /**
+     * Checks if the event is cancelled
+     */
+    boolean isCancelled();
+
 }
