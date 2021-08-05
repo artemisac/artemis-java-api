@@ -1,5 +1,6 @@
 package ac.artemis.anticheat.api.material;
 
+import ac.artemis.anticheat.api.cache.NMSCache;
 import ac.artemis.anticheat.api.validate.Validate;
 import com.google.common.base.Enums;
 import com.google.common.cache.Cache;
@@ -14,6 +15,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
@@ -1226,7 +1228,7 @@ public enum NMSMaterial {
      *
      * @since 1.0.0
      */
-    private static final Cache<String, NMSMaterial> NAME_CACHE = CacheBuilder.newBuilder()
+    private static final NMSCache<String, NMSMaterial> NAME_CACHE = new NMSCache<String, NMSMaterial>()
             .expireAfterAccess(1, TimeUnit.HOURS)
             .build();
 
@@ -1235,11 +1237,11 @@ public enum NMSMaterial {
      *
      * @since 3.4.0
      */
-    private static final LoadingCache<String, Pattern> CACHED_REGEX = CacheBuilder.newBuilder()
+    private static final NMSCache<String, Pattern> CACHED_REGEX = new NMSCache<String, Pattern>()
             .expireAfterAccess(3, TimeUnit.HOURS)
-            .build(new CacheLoader<String, Pattern>() {
+            .build(new Function <String, Pattern>() {
                 @Override
-                public Pattern load( String str) {
+                public Pattern apply( String str) {
                     try {
                         return Pattern.compile(str);
                     } catch (PatternSyntaxException ex) {
@@ -1776,7 +1778,7 @@ public enum NMSMaterial {
             }
             if (checker.startsWith("REGEX:")) {
                 comp = comp.substring(6);
-                Pattern pattern = CACHED_REGEX.getUnchecked(comp);
+                Pattern pattern = CACHED_REGEX.getIfPresent(comp);
                 if (pattern != null && pattern.matcher(name).matches()) return true;
                 continue;
             }

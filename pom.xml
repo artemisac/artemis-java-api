@@ -63,6 +63,10 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>elmakers-repo</id>
+            <url>https://maven.elmakers.com/repository/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -73,16 +77,22 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>minecraft-server</artifactId>
+            <version>1.7.10-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>16.0.1</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>ac.artemis.anticheat</groupId>
+            <groupId>ac.artemis.packet</groupId>
             <artifactId>Packet-API</artifactId>
-            <version>1.2.15</version>
-            <scope>compile</scope>
+            <version>1.2.16</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

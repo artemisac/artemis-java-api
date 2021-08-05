@@ -32,6 +32,7 @@ public enum Type {
     DISABLER(Category.EXPLOIT),
     PROTOCOL(Category.MISC),
     ENTITYSPEED(Category.MISC),
+    HEURISTICS(Category.MISC),
     UNKNOWN(Category.MISC);
 
     private final Category category;
